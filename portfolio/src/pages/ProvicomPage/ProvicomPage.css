@@ -1,0 +1,31 @@
+.org-chart {
+  background: #0c0f15;
+  border-radius: 16px;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-left: 3px solid #0aff9d;
+}
+
+.mission-list {
+  list-style: none;
+  padding: 0;
+}
+
+.mission-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #1e2a3a;
+}
+
+.mission-list li:last-child {
+  border-bottom: none;
+}
+
+.stats-badge {
+  display: inline-block;
+  background: #16212b;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}

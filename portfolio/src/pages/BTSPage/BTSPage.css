@@ -1,0 +1,25 @@
+.option-card {
+  background: #0b0e14;
+  border-radius: 20px;
+  padding: 1.5rem;
+  border: 1px solid #1e2a3a;
+  transition: all 0.2s;
+}
+
+.option-card:hover {
+  border-color: #00f2ff;
+  transform: translateY(-3px);
+}
+
+.option-title {
+  color: #0aff9d;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.debouches-list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  color: #b0c4de;
+}

@@ -1,0 +1,7 @@
+.engagement-card {
+  background: linear-gradient(135deg, #0f1117, #0a0c10);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid #1e2a3a;
+}

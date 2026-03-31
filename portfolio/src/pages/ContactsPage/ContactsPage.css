@@ -1,0 +1,31 @@
+.contact-card {
+  text-align: center;
+  padding: 2rem;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #0b0e14;
+  padding: 0.8rem 1.5rem;
+  border-radius: 40px;
+  margin: 0.5rem;
+  transition: all 0.2s;
+  color: #eef2ff;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  background: #16212b;
+  transform: translateY(-2px);
+  color: #0aff9d;
+}
+
+.social-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
