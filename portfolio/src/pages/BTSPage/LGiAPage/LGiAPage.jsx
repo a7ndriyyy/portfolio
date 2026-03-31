@@ -16,14 +16,16 @@ const LGiAPage = () => {
         </p>
       </div>
 
-      <div className="glass-card">
-        <h2 className="section-title">📋 Mission réalisée</h2>
-        <ul className="mission-list">
-          <li>✔ Analyse des besoins réseau</li>
-          <li>✔ Configuration VLAN et segmentation</li>
-          <li>✔ Sécurisation des accès (ACL, 802.1X)</li>
-          <li>✔ Documentation technique complète</li>
-        </ul>
+       <div className="glass-card pdf-viewer-container">
+        <h3 className="subtitle">Documentation technique - Contexte LG12A</h3>
+        <div className="pdf-wrapper">
+          <iframe
+            src="../../../../public/documents/Contexte_LGI2A_session2021_Rev10.pdf"
+            title="Contexte LG12A"
+            className="pdf-iframe"
+            frameBorder="0"
+          />
+        </div>
       </div>
     </div>
   );

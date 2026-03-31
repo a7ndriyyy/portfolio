@@ -3,13 +3,11 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
-// Import all pages
+// Import pages
+import HelloPage from './pages/HomePage/HelloPage';
 import HomePage from './pages/HomePage/HomePage';
 import BTSPage from './pages/BTSPage/BTSPage';
 import ProvicomPage from './pages/ProvicomPage/ProvicomPage';
-import LGiAPage from './pages/BTSPage/LGiAPage/LGiAPage';
-import InfraNetworkPage from './pages/BTSPage/InfraNetworkPage/InfraNetworkPage';
-import InfraSystemPage from './pages/BTSPage/InfraSystemPage/InfraSystemPage';
 import CertificationPage from './pages/CertificationPage/CertificationPage';
 import EpreuvesPage from './pages/EpreuvesPage/EpreuvesPage';
 import UF4Page from './pages/UF4Page/UF4Page';
@@ -23,19 +21,18 @@ function App() {
   const renderPage = () => {
     switch(currentPage) {
       case "Accueil":
-        return <HomePage />;
+        return (
+          <>
+            <HelloPage />
+            <HomePage />
+          </>
+        );
       case "Profil":
-        return <HomePage />; // You can create a separate ProfilPage if needed
+        return <HomePage />;
       case "BTS":
         return <BTSPage />;
       case "Provicom":
         return <ProvicomPage />;
-      case "LGiA":
-        return <LGiAPage />;
-      case "Infra Réseau":
-        return <InfraNetworkPage />;
-      case "Infra Système":
-        return <InfraSystemPage />;
       case "Certifications":
         return <CertificationPage />;
       case "Épreuves":
@@ -49,7 +46,12 @@ function App() {
       case "Contacts":
         return <ContactsPage />;
       default:
-        return <HomePage />;
+        return (
+          <>
+            <HelloPage />
+            <HomePage />
+          </>
+        );
     }
   };
 

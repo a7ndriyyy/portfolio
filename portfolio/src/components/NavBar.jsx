@@ -3,26 +3,32 @@ import './NavBar.css';
 
 const NavBar = ({ currentPage, setCurrentPage }) => {
   const navItems = [
-    "Accueil", "Profil", "BTS", "Provicom", "LGiA",
-    "Infra Réseau", "Infra Système", "Certifications",
-    "Épreuves", "Engagement", "Projets", "Veille Tech", "Contacts"
+    { name: "Accueil", path: "_hello" },
+    { name: "Profil", path: "_A propos de moi" },
+    { name: "BTS", path: "_BTS" },
+    { name: "Provicom", path: "_Provicom" },
+    { name: "Certifications", path: "_Certifications" },
+    { name: "Épreuves", path: "_Epreuves" },
+    { name: "Engagement", path: "_Engagement" },
+    { name: "Projets", path: "_Projets" },
+    { name: "Veille Tech", path: "_Veille-tech" },
+    { name: "Contacts", path: "_Contact-me" }
   ];
 
   return (
     <nav className="navbar">
       <div className="nav-container">
         <div className="logo">
-          <h1>◈ ANDRII NASTYCH</h1>
-          <p>BTS SIO SISR | Cybersécurité</p>
+          <h1>Andrii Nastych</h1>
         </div>
         <ul className="nav-links">
-          {navItems.map(item => (
-            <li key={item}>
+          {navItems.map(({ name, path }) => (
+            <li key={name}>
               <button
-                onClick={() => setCurrentPage(item)}
-                className={currentPage === item ? "active" : ""}
+                onClick={() => setCurrentPage(name)}
+                className={currentPage === name ? "active" : ""}
               >
-                {item === "Accueil" ? "🏠 Accueil" : item}
+                {path}
               </button>
             </li>
           ))}
