@@ -2,7 +2,7 @@ import React from 'react';
 import { 
   FiCalendar, FiMapPin, FiMail, FiPhone, 
   FiGithub, FiLinkedin, FiAward, FiBriefcase, 
-  FiBookOpen, FiHeart, FiUser, FiCpu, FiShield, FiGlobe, FiServer
+  FiUser
 } from 'react-icons/fi';
 import './HomePage.css';
 

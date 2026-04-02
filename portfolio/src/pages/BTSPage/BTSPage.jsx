@@ -332,14 +332,14 @@ const InfraSystemeTab = () => {
           
           <hr className="mission-divider" />
           
-          <h3 className="subtitle-clean">// Objectifs</h3>
+          <h3 className="subtitle-clean">{/* Objectifs */}</h3>
           <ul className="objectives-list-clean">
             {mission.objectives.map((obj, idx) => (
               <li key={idx}>{obj}</li>
             ))}
           </ul>
           
-          <h3 className="subtitle-clean">// Documentations technique</h3>
+          <h3 className="subtitle-clean">{/* Documentations technique */}</h3>
           
           {/* Steps Table */}
           <div className="steps-table">
