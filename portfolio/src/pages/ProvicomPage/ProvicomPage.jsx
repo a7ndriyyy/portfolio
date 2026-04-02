@@ -1,40 +1,299 @@
 import React from 'react';
+import { 
+  FiMapPin, FiBriefcase, FiUsers, FiTrendingUp, FiShield, 
+  FiCpu, FiServer, FiTool, FiAward, FiArrowRight, FiCalendar,
+   FiEye, FiLock, FiVideo, FiHardDrive, FiCloud
+} from 'react-icons/fi';
 import './ProvicomPage.css';
-import ActivitiesPage from './ActivitiesPage/ActivitiesPage';
 
-const ProvicomPage = () => {
+const ProvicomPage = ({ setCurrentPage }) => {
   return (
-    <div>
-      <div className="glass-card">
-        <h1 className="section-title">🏢 PROVICOM – Entreprise d'accueil</h1>
-        <p><strong>📍 Adresse :</strong> 51 Avenue de l'Europe, 77184 Emerainville</p>
-        <p><strong>📞 Tél :</strong> 01 60 95 17 42</p>
-        <p><strong>🔧 Secteur d'activité :</strong> Systèmes de sécurité, télésurveillance, contrôle d'accès, vidéosurveillance, alarmes anti-intrusion.</p>
-        <hr />
-        <p><strong>📜 Historique :</strong> Provicom a été fondée pour répondre aux besoins croissants de sécurité. L'entreprise s'est imposée comme un acteur clé grâce à une expertise technique pointue et une veille technologique constante.</p>
-        <p><strong>⚖️ Statut juridique :</strong> SARL (Société à Responsabilité Limitée)</p>
-      </div>
-
-      <div className="glass-card">
-        <h2 className="section-title">📊 Structure de l'entreprise</h2>
-        <div className="org-chart">
-          <p><strong>Organigramme fonctionnel :</strong></p>
-          <p style={{ marginTop: '0.5rem' }}>📍 Direction PROVICOM</p>
-          <p style={{ marginLeft: '1rem' }}>├─ Responsable Travaux & Maintenance – Samuel LECLERCQ</p>
-          <p style={{ marginLeft: '2rem' }}>│  ├─ Sofiane KHEDIRI – Technicien</p>
-          <p style={{ marginLeft: '2rem' }}>│  ├─ Thomas DUVAL – Technicien</p>
-          <p style={{ marginLeft: '2rem' }}>│  └─ Andrii NASTYCH – Apprenti</p>
-          <p style={{ marginLeft: '1rem' }}>└─ Responsable Commercial & Administratif – Christophe POUZET</p>
-          <p style={{ marginLeft: '2rem' }}>   └─ Marine COQUEL – Assistante</p>
-        </div>
-        <div style={{ marginTop: '1rem' }}>
-          <span className="stats-badge">👥 Cadres: 2</span>
-          <span className="stats-badge">👨‍💻 Employés: 3</span>
-          <span className="stats-badge">🎓 Apprenti: 1</span>
+    <div className="provicom-page">
+      {/* Hero Section */}
+      <div className="glass-card hero-card">
+        <h1 className="section-title">PROVICOM</h1>
+        <p className="hero-subtitle">
+          Entreprise spécialisée dans les systèmes de sécurité et la protection des biens et des personnes
+        </p>
+        <div className="company-badges">
+          <span className="badge">Télésurveillance</span>
+          <span className="badge">Contrôle d'accès</span>
+          <span className="badge">Vidéosurveillance</span>
+          <span className="badge">Alarmes anti-intrusion</span>
         </div>
       </div>
 
-      <ActivitiesPage />
+      {/* Section: Présentation de l'entreprise */}
+      <div className="glass-card">
+        <h2 className="section-title-secondary">_presentation</h2>
+        
+        <div className="info-grid">
+          <div className="info-item">
+            <FiBriefcase className="info-icon" />
+            <div>
+              <h3>Secteur d'activité</h3>
+              <p>Provicom est une entreprise spécialisée dans les <strong>systèmes de sécurité</strong> et la <strong>protection des biens et des personnes</strong>. Elle propose des solutions de télésurveillance, contrôle d'accès, vidéosurveillance et alarmes anti-intrusion pour les particuliers et les professionnels.</p>
+            </div>
+          </div>
+          
+          <div className="info-item">
+            <FiCalendar className="info-icon" />
+            <div>
+              <h3>Historique du secteur</h3>
+              <p>Le secteur de la sécurité électronique s'est fortement développé avec l'évolution des technologies numériques. Autrefois dominé par des systèmes analogiques simples, il a intégré l'IA, l'IoT et la cybersécurité.</p>
+            </div>
+          </div>
+          
+          <div className="info-item">
+            <FiAward className="info-icon" />
+            <div>
+              <h3>Statut juridique</h3>
+              <p>Provicom est une <strong>Société à Responsabilité Limitée (SARL)</strong> enregistrée en France, permettant une gestion souple tout en protégeant le patrimoine personnel des associés.</p>
+            </div>
+          </div>
+          
+          <div className="info-item">
+            <FiTrendingUp className="info-icon" />
+            <div>
+              <h3>Chiffre d'affaires</h3>
+              <p>Croissance constante portée par la demande accrue en solutions de sécurité. Progression annuelle grâce à l'expansion du portefeuille clients et l'innovation des services.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Localisation avec image */}
+      <div className="glass-card">
+        <h2 className="section-title-secondary">_Localisation</h2>
+        <div className="location-container">
+          <div className="location-info">
+            <FiMapPin className="location-icon" />
+            <h3>51 avenue de l'Europe</h3>
+            <p>77184 - Emerainville</p>
+            <p className="location-desc">Situé en région Île-de-France, cette localisation stratégique permet de couvrir efficacement la région parisienne et ses environs. L'entreprise travaille avec des clients dans toute la France.</p>
+          </div>
+          <div className="location-image">
+            <img src="/images/geo_provicom.png" alt="Localisation Provicom" className="map-image" />
+          </div>
+        </div>
+      </div>
+
+      {/* Structure et Organigramme */}
+      <div className="glass-card">
+        <h2 className="section-title-secondary">_Structure</h2>
+        
+        <div className="structure-grid">
+          <div className="structure-item">
+            <h3><FiUsers /> Pôles d'activité</h3>
+            <ul>
+              <li><strong>Département technique</strong> : Installation et maintenance</li>
+              <li><strong>Département commercial</strong> : Relations clients, vente</li>
+              <li><strong>Département administratif</strong> : Gestion, finance</li>
+            </ul>
+          </div>
+          
+          <div className="structure-item">
+            <h3><FiTool /> Processus de travail</h3>
+            <ol>
+              <li>Analyse des besoins du client</li>
+              <li>Proposition de solutions adaptées</li>
+              <li>Installation et configuration</li>
+              <li>Suivi et maintenance</li>
+            </ol>
+          </div>
+        </div>
+
+        <div className="organigramme-container">
+          <h3>Organigramme fonctionnel</h3>
+          <img src="/images/organigramme.png" alt="Organigramme Provicom" className="organigramme-image" />
+          <div className="organigramme-text">
+            <p><strong>Personnels Cadres :</strong> 2</p>
+            <p><strong>Personnels Employés :</strong> 3</p>
+            <p><strong>Apprenti :</strong> 1</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Secteur économique et concurrence */}
+      <div className="glass-card">
+        <h2 className="section-title-secondary">_Marche & concurrence</h2>
+        
+        <div className="market-factors">
+          <h3>Facteurs de croissance du marché</h3>
+          <div className="factors-grid">
+            <div className="factor">📈 Augmentation des cambriolages</div>
+            <div className="factor">⚖️ Réglementation plus stricte</div>
+            <div className="factor">💡 Essor des nouvelles technologies</div>
+            <div className="factor">🎯 Prise de conscience accrue</div>
+          </div>
+        </div>
+        
+        <div className="competitive-advantages">
+          <h3>Atouts concurrentiels de Provicom</h3>
+          <ul className="advantages-list">
+            <li>Service client réactif et personnalisé</li>
+            <li>Technologies de pointe</li>
+            <li>Expertise reconnue dans le domaine</li>
+            <li>Forte présence locale avec couverture nationale</li>
+            <li>Proximité avec les clients et approche sur-mesure</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Activités et Projets */}
+      <div className="glass-card">
+        <h2 className="section-title-secondary">_Activites</h2>
+        <div className="activities-grid">
+          <div className="activity-item">
+            <FiShield size={24} />
+            <span>Détection vol</span>
+          </div>
+          <div className="activity-item">
+            <FiEye size={24} />
+            <span>Télésurveillance</span>
+          </div>
+          <div className="activity-item">
+            <FiVideo size={24} />
+            <span>Surveillance vidéo</span>
+          </div>
+          <div className="activity-item">
+            <FiLock size={24} />
+            <span>Contrôle d'accès</span>
+          </div>
+        </div>
+        <div className="activities-image">
+          <img src="/images/activites.png" alt="Activités Provicom" className="activities-img" />
+        </div>
+      </div>
+
+      {/* Section: Cadre de l'apprentissage */}
+      <div className="glass-card">
+        <h2 className="section-title-secondary">_Cadre d'apprentissage</h2>
+        
+        <div className="apprentissage-section">
+          <h3>Structure du service informatique</h3>
+          <div className="service-grid">
+            <div className="service-card">
+              <FiServer size={20} />
+              <strong>Support informatique</strong>
+              <p>Gestion des incidents, assistance utilisateurs, maintenance</p>
+            </div>
+            <div className="service-card">
+              <FiCloud size={20} />
+              <strong>Gestion d'infrastructure</strong>
+              <p>Administration réseaux, cybersécurité, gestion serveurs</p>
+            </div>
+            <div className="service-card">
+              <FiCpu size={20} />
+              <strong>Développement logiciel</strong>
+              <p>Création/maintenance logiciels, automatisation</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="organisation-service">
+          <h3>Organisation du service informatique</h3>
+          <div className="org-tree">
+            <div className="tree-node root">Chef de service informatique</div>
+            <div className="tree-children">
+              <div className="tree-node">🖥️ Équipe matériel<br/><span>Techniciens & administrateurs</span></div>
+              <div className="tree-node">💻 Équipe logiciels<br/><span>Développeurs & ingénieurs</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div className="missions-service">
+          <h3>Missions du service informatique</h3>
+          <ul className="missions-list">
+            <li>Installation et maintenance des systèmes de surveillance</li>
+            <li>Développement et intégration de logiciels internes</li>
+            <li>Gestion des réseaux et sécurisation des infrastructures</li>
+            <li>Support technique aux employés et clients</li>
+            <li>Veille technologique</li>
+          </ul>
+        </div>
+
+        <div className="maitre-apprentissage">
+          <h3>Maître d'apprentissage</h3>
+          <p><strong>Rôle :</strong> Tuteur expérimenté chargé d'accompagner l'apprenti</p>
+          <ul>
+            <li>Former et guider sur les technologies</li>
+            <li>Superviser les missions confiées</li>
+            <li>Faciliter l'intégration au sein de l'équipe</li>
+            <li>Évaluer les compétences</li>
+          </ul>
+        </div>
+
+        <div className="apprentice-place">
+          <h3>Ma place au sein du service</h3>
+          <p>L'apprenti joue un rôle <strong>actif</strong> avec des missions concrètes :</p>
+          <div className="tasks-grid">
+            <span className="task-tag">Assistance technique</span>
+            <span className="task-tag">Maintenance configuration</span>
+            <span className="task-tag">Développement scripts</span>
+            <span className="task-tag">Participation réunions</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Section: Système d'Information */}
+      <div className="glass-card">
+        <h2 className="section-title-secondary">_Système d'Information</h2>
+        
+        <div className="si-section">
+          <h3>Fonctions principales du SI</h3>
+          <ul>
+            <li>Collecter et stocker les données de l'entreprise</li>
+            <li>Traiter et analyser les informations</li>
+            <li>Diffuser l'information aux bonnes personnes</li>
+            <li>Garantir la sécurité et l'intégrité des données</li>
+          </ul>
+        </div>
+
+        <div className="si-resources">
+          <h3>Ressources du Système d'Information</h3>
+          <div className="resources-grid">
+            <div className="resource">
+              <FiHardDrive />
+              <strong>Matérielles</strong>
+              <p>Serveurs, postes de travail, équipements réseau, caméras, alarmes</p>
+            </div>
+            <div className="resource">
+              <FiCloud />
+              <strong>Logiciels</strong>
+              <p>GLPI, logiciels de supervision, outils de ticketing, applications métier</p>
+            </div>
+            <div className="resource">
+              <FiUsers />
+              <strong>Humaines</strong>
+              <p>Techniciens, administrateurs, développeurs, support utilisateur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Link to Activities Page - Using button instead of Link */}
+      <div className="glass-card activities-link-card">
+        <div className="activities-link-content">
+          <div className="activities-link-text">
+            <h2>📄 Activités en entreprise</h2>
+            <p>Consultez mes 5 missions réalisées chez Provicom :</p>
+            <ul>
+              <li>GLPI - Gestion des incidents</li>
+              <li>Active Directory - Installation et configuration</li>
+              <li>Serveur NAS - Mise en place</li>
+              <li>Debian 12 - Installation serveur</li>
+              <li>Documentation technique</li>
+            </ul>
+          </div>
+          <button 
+            className="activities-link-btn"
+            onClick={() => setCurrentPage("Activites")}
+          >
+            Voir mes activités <FiArrowRight />
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

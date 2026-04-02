@@ -11,9 +11,9 @@
 }
 
 .section-subtitle {
-  color: var(--text-dim);
+  color: var(--neon-green);
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 1.9rem;
 }
 
 /* About Grid */

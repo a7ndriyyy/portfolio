@@ -1,31 +1,462 @@
-.org-chart {
-  background: #0c0f15;
+/* Provicom Page Styles */
+.provicom-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-card {
+  text-align: center;
+  background: linear-gradient(135deg, var(--bg-card-solid), var(--bg-tertiary));
+}
+
+.hero-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.company-badges {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* Info Grid */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-tertiary);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  transition: var(--transition-fast);
+}
+
+.info-item:hover {
+  border-color: var(--neon-green);
+}
+
+.info-icon {
+  color: var(--neon-green);
+  flex-shrink: 0;
+  font-size: 1.5rem;
+}
+
+.info-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.info-item p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Location */
+.location-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .location-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.location-info {
+  text-align: center;
+}
+
+.location-icon {
+  color: var(--neon-green);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.location-info h3 {
+  font-size: 1.2rem;
+  font-family: var(--font-mono);
+}
+
+.location-desc {
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.location-image {
+  background: var(--bg-tertiary);
   border-radius: 16px;
   padding: 1rem;
-  margin-top: 1rem;
-  border-left: 3px solid #0aff9d;
+  border: 1px solid var(--border-color);
 }
 
-.mission-list {
-  list-style: none;
-  padding: 0;
+.map-image {
+  width: 100%;
+  border-radius: 12px;
 }
 
-.mission-list li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #1e2a3a;
+/* Structure */
+.structure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.mission-list li:last-child {
-  border-bottom: none;
+@media (max-width: 768px) {
+  .structure-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.stats-badge {
-  display: inline-block;
-  background: #16212b;
-  padding: 0.3rem 1rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  margin-right: 0.5rem;
+.structure-item {
+  background: var(--bg-tertiary);
+  padding: 1.2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.structure-item h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--neon-green);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+}
+
+.structure-item ul, .structure-item ol {
+  padding-left: 1.5rem;
+}
+
+.structure-item li {
   margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+/* Organigramme */
+.organigramme-container {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.organigramme-container h3 {
+  margin-bottom: 1rem;
+  color: var(--neon-green);
+  font-family: var(--font-mono);
+}
+
+.organigramme-image {
+  max-width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+}
+
+.organigramme-text {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background: var(--bg-tertiary);
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+/* Market Factors */
+.market-factors h3, .competitive-advantages h3 {
+  margin-bottom: 1rem;
+  color: var(--neon-green);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+}
+
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .factors-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.factor {
+  background: var(--bg-tertiary);
+  padding: 0.8rem;
+  border-radius: 12px;
+  border-left: 3px solid var(--neon-green);
+  font-size: 0.85rem;
+}
+
+.advantages-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.advantages-list li {
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.advantages-list li::before {
+  content: '✓';
+  left: 0;
+  color: var(--neon-green);
+}
+
+/* Activities Grid */
+.activities-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.activity-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-tertiary);
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  transition: var(--transition-fast);
+}
+
+.activity-item:hover {
+  border-color: var(--neon-green);
+  transform: translateY(-2px);
+}
+
+.activity-item svg {
+  color: var(--neon-green);
+}
+
+.activities-image {
+  text-align: center;
+}
+
+.activities-img {
+  max-width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+/* Apprentissage Section */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  background: var(--bg-tertiary);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.service-card svg {
+  color: var(--neon-green);
+  margin-bottom: 0.5rem;
+}
+
+.service-card strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Organisation Tree */
+.org-tree {
+  background: var(--bg-tertiary);
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.tree-node {
+  display: inline-block;
+  background: var(--bg-card-solid);
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--neon-green);
+  margin: 0.5rem;
+}
+
+.tree-node.root {
+  background: var(--neon-green-dim);
+  border-color: var(--neon-green);
+}
+
+.tree-node span {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+
+.tree-children {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Missions List */
+.missions-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.missions-list li {
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.missions-list li::before {
+  content: '✅';
+  left: 0;
+  color: var(--neon-green);
+}
+
+/* Tasks Grid */
+.tasks-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.task-tag {
+  background: var(--neon-green-dim);
+  border: 1px solid var(--neon-green);
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+}
+
+/* SI Resources */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resource {
+  background: var(--bg-tertiary);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.resource svg {
+  color: var(--neon-green);
+  margin-bottom: 0.5rem;
+}
+
+.resource strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.resource p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Activities Link Card */
+.activities-link-card {
+  background: linear-gradient(135deg, var(--neon-green-dim), var(--bg-tertiary));
+  border: 1px solid var(--neon-green);
+}
+
+.activities-link-content {
+  text-align: center;
+}
+
+.activities-link-text h2 {
+  margin-bottom: 1rem;
+}
+
+.activities-link-text ul {
+  display: inline-block;
+  text-align: left;
+  margin: 1rem 0;
+}
+
+.activities-link-text ul li {
+  list-style: none;
+}
+
+.activities-link-text ul li::before {
+  content: '📄';
+  left: -1rem;
+}
+
+.activities-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--neon-green);
+  color: var(--bg-primary);
+  padding: 0.8rem 2rem;
+  border-radius: 40px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: var(--transition-fast);
+}
+
+.activities-link-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(10, 255, 157, 0.4);
+  color: var(--bg-primary);
 }

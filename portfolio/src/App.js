@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
+import './global.styles.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import BinaryRain from './components/BinaryRain';
 
 // Import pages
 import HelloPage from './pages/HomePage/HelloPage';
@@ -24,7 +26,6 @@ function App() {
         return (
           <>
             <HelloPage />
-            <HomePage />
           </>
         );
       case "Profil":
@@ -57,6 +58,11 @@ function App() {
 
   return (
     <div className="app">
+      {/* Global Background Effects */}
+      <BinaryRain />
+      <div className="scan-lines-global"></div>
+      <div className="glitch-overlay-global"></div>
+      
       <NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <main className="main-content">
         {renderPage()}

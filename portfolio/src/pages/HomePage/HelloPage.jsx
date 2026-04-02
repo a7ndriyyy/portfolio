@@ -12,11 +12,6 @@ const HelloPage = () => {
 
   return (
     <div className="hello-page">
-      {/* Hacking System Background Effect */}
-      <div className="matrix-bg"></div>
-      <div className="scan-lines"></div>
-      <div className="glitch-overlay"></div>
-      
       <div className="hero-content">
         <div className="terminal-glow"></div>
         
