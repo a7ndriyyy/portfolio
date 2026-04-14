@@ -103,7 +103,7 @@
 
 .stat-label-act {
   font-size: 0.7rem;
-  color: var(--text-dim);
+  color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }

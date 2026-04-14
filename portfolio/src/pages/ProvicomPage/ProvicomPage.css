@@ -165,6 +165,103 @@
   border-radius: 12px;
 }
 
+
+
+
+
+
+/* Zone d'intervention - Cartes */
+.zone-description {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.map-container {
+  margin-bottom: 2rem;
+  background: var(--bg-tertiary);
+  border-radius: 20px;
+  padding: 1.2rem;
+  border: 1px solid var(--border-color);
+}
+
+.map-title {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--neon-green);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.france-map, .idf-map {
+  background: rgba(5, 7, 10, 0.5);
+  border-radius: 16px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.map-svg {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Clients List */
+.clients-list {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.clients-list h4 {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.6rem;
+}
+
+.client-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding: 0.3rem 0;
+}
+
+.client-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--neon-cyan);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.client-item:hover {
+  color: var(--neon-green);
+}
+
+.client-item:hover .client-dot {
+  background: var(--neon-green);
+  box-shadow: 0 0 5px var(--neon-green);
+}
+
+
+
+
+
+
+
 /* Structure */
 .structure-grid {
   display: grid;

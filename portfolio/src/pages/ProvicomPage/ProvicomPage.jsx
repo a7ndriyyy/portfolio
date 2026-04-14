@@ -93,6 +93,83 @@ const ProvicomPage = ({ setCurrentPage }) => {
         </div>
       </div>
 
+      {/* Zone d'intervention - Cartes */}
+<div className="glass-card">
+  <h2 className="section-title-secondary">_zone-intervention</h2>
+  <p className="zone-description">
+    Provicom intervient principalement en Île-de-France, avec des clients répartis dans toute la région.
+    Voici la localisation des principaux sites clients.
+  </p>
+  
+  {/* Carte de France avec focus Île-de-France */}
+  <div className="map-container">
+    <h3 className="map-title">📍 France - Zone d'intervention principale</h3>
+   {/* Carte France avec image */}
+<div className="france-map-img">
+  <img src="/images/france.webp" alt="Carte France" className="map-img" />
+  <div className="map-overlay">
+    <div className="region-highlight">Île-de-France</div>
+  </div>
+</div>
+  </div>
+
+  {/* Carte Île-de-France détaillée avec clients */}
+  <div className="map-container">
+    <h3 className="map-title">📍 Île-de-France - Sites clients</h3>
+    {/* Carte Île-de-France avec image */}
+<div className="idf-map-img">
+  <img src="/images/ile-de-france.webp" alt="Carte Île-de-France clients" className="map-img" />
+</div>
+    
+    {/* Liste des clients */}
+    <div className="clients-list">
+      <h4>Clients principaux en Île-de-France</h4>
+      <div className="clients-grid">
+        <div className="client-item">
+          <span className="client-dot"></span>
+          <span>Paris (75) - Centre ville</span>
+        </div>
+        <div className="client-item">
+          <span className="client-dot"></span>
+          <span>Boulogne-Billancourt (92)</span>
+        </div>
+        <div className="client-item">
+          <span className="client-dot"></span>
+          <span>Saint-Denis (93)</span>
+        </div>
+        <div className="client-item">
+          <span className="client-dot"></span>
+          <span>Créteil (94)</span>
+        </div>
+        <div className="client-item">
+          <span className="client-dot"></span>
+          <span>Versailles (78)</span>
+        </div>
+        <div className="client-item">
+          <span className="client-dot"></span>
+          <span>Évry-Courcouronnes (91)</span>
+        </div>
+        <div className="client-item">
+          <span className="client-dot"></span>
+          <span>Meaux (77)</span>
+        </div>
+        <div className="client-item">
+          <span className="client-dot"></span>
+          <span>Melun (77)</span>
+        </div>
+        <div className="client-item">
+          <span className="client-dot"></span>
+          <span>Cergy (95)</span>
+        </div>
+        <div className="client-item">
+          <span className="client-dot"></span>
+          <span>Nanterre (92)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
       {/* Structure et Organigramme */}
       <div className="glass-card">
         <h2 className="section-title-secondary">_Structure</h2>
