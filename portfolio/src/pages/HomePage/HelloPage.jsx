@@ -68,7 +68,6 @@ const HelloPage = () => {
       
       <div className="scroll-indicator">
         <div className="mouse"></div>
-        <p>scroll down</p>
       </div>
     </div>
   );

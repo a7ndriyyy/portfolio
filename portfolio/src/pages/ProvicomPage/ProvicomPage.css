@@ -10,6 +10,8 @@
   background: linear-gradient(135deg, var(--bg-card-solid), var(--bg-tertiary));
 }
 
+
+
 .hero-subtitle {
   color: var(--text-secondary);
   font-size: 1.1rem;
@@ -21,6 +23,54 @@
   justify-content: center;
   gap: 0.8rem;
   flex-wrap: wrap;
+}
+
+
+
+/* Company Logo Styles */
+.company-logo {
+  display: block;
+  max-width: 500px;
+  height: auto;
+  margin: 1rem auto;
+  filter: drop-shadow(0 0 10px rgba(10, 255, 157, 0.3));
+  transition: var(--transition-normal);
+}
+
+.company-logo:hover {
+  filter: drop-shadow(0 0 15px rgba(10, 255, 157, 0.5));
+  transform: scale(1.02);
+}
+
+/* Quick Access Button */
+.quick-access {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.quick-access-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--neon-green-dim);
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  backdrop-filter: blur(10px);
+}
+
+.quick-access-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(10, 255, 157, 0.3);
+  background: var(--neon-green);
+  color: var(--bg-primary);
 }
 
 /* Info Grid */

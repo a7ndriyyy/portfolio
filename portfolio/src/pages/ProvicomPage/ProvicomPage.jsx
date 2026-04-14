@@ -2,7 +2,7 @@ import React from 'react';
 import { 
   FiMapPin, FiBriefcase, FiUsers, FiTrendingUp, FiShield, 
   FiCpu, FiServer, FiTool, FiAward, FiArrowRight, FiCalendar,
-   FiEye, FiLock, FiVideo, FiHardDrive, FiCloud
+   FiEye, FiLock, FiVideo, FiHardDrive, FiCloud,FiFileText
 } from 'react-icons/fi';
 import './ProvicomPage.css';
 
@@ -12,6 +12,7 @@ const ProvicomPage = ({ setCurrentPage }) => {
       {/* Hero Section */}
       <div className="glass-card hero-card">
         <h1 className="section-title">PROVICOM</h1>
+        <img src="/images/LogoProvicom.png" alt="Logo Provicom" className="company-logo" />
         <p className="hero-subtitle">
           Entreprise spécialisée dans les systèmes de sécurité et la protection des biens et des personnes
         </p>
@@ -22,6 +23,20 @@ const ProvicomPage = ({ setCurrentPage }) => {
           <span className="badge">Alarmes anti-intrusion</span>
         </div>
       </div>
+
+
+{/* Quick Access Floating Button - Add after Hero section */}
+<div className="quick-access">
+  <button 
+    className="quick-access-btn"
+    onClick={() => setCurrentPage("Activites")}
+  >
+    <FiFileText size={18} />
+    Accéder aux activités
+    <FiArrowRight size={16} />
+  </button>
+</div>
+
 
       {/* Section: Présentation de l'entreprise */}
       <div className="glass-card">
@@ -272,28 +287,29 @@ const ProvicomPage = ({ setCurrentPage }) => {
         </div>
       </div>
 
-      {/* Link to Activities Page - Using button instead of Link */}
-      <div className="glass-card activities-link-card">
-        <div className="activities-link-content">
-          <div className="activities-link-text">
-            <h2>📄 Activités en entreprise</h2>
-            <p>Consultez mes 5 missions réalisées chez Provicom :</p>
-            <ul>
-              <li>GLPI - Gestion des incidents</li>
-              <li>Active Directory - Installation et configuration</li>
-              <li>Serveur NAS - Mise en place</li>
-              <li>Debian 12 - Installation serveur</li>
-              <li>Documentation technique</li>
-            </ul>
-          </div>
-          <button 
-            className="activities-link-btn"
-            onClick={() => setCurrentPage("Activites")}
-          >
-            Voir mes activités <FiArrowRight />
-          </button>
-        </div>
-      </div>
+   {/* Link to Activities Page */}
+{/* Link to Activities Page */}
+<div className="glass-card activities-link-card">
+  <div className="activities-link-content">
+    <div className="activities-link-text">
+      <h2>📄 Activités en entreprise</h2>
+      <p>Consultez mes 5 missions réalisées chez Provicom :</p>
+      <ul>
+        <li>Installation d'une caméra IP Dahua</li>
+        <li>Pose d'un Bouton Anti-Agression</li>
+        <li>Installation et câblage d'une sirène</li>
+        <li>Procédure d'installation – Clavier TSA ALCEA</li>
+        <li>Migration vers une centrale Risco Lightsys</li>
+      </ul>
+    </div>
+    <button 
+      className="activities-link-btn"
+      onClick={() => setCurrentPage("Activites")}
+    >
+      Voir mes activités <FiArrowRight />
+    </button>
+  </div>
+</div>
     </div>
   );
 };

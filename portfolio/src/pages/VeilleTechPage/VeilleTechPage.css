@@ -94,7 +94,6 @@
 
 .stat-label {
   font-size: 0.75rem;
-  color: var(--bg-tertiary);
 }
 
 @media (max-width: 768px) {

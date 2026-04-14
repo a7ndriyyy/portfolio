@@ -1,82 +1,188 @@
-import React from 'react';
-import { FiArrowLeft, FiDownload, FiEye } from 'react-icons/fi';
+import React, { useState } from 'react';
+import { 
+  FiArrowLeft, FiDownload, FiEye, 
+  FiChevronRight, FiGrid, FiList, FiFileText,
+  FiCamera, FiAlertCircle, FiBell, FiKey, FiShield
+} from 'react-icons/fi';
 import './ActivitiesPage.css';
 
 const ActivitiesPage = ({ setCurrentPage }) => {
+  const [viewMode, setViewMode] = useState('grid');
+
   const activities = [
     {
       id: 1,
-      title: "Installation Debian 12",
-      description: "Installation et configuration de Debian 12 comme système d'exploitation serveur",
-      pdfFile: "Installation_Debian.pdf"
+      title: "Installation d'une caméra IP Dahua",
+      description: "Installation et configuration d'une caméra IP Dahua pour la vidéosurveillance d'un site professionnel.",
+      pdfFile: "Activité1_Nastych_Provicom.pdf",
+      date: "2024",
+      type: "Vidéosurveillance",
+      icon: <FiCamera size={32} />
     },
     {
       id: 2,
-      title: "Installation GLPI",
-      description: "Mise en place de GLPI pour la gestion des incidents et du parc informatique",
-      pdfFile: "Installation_GLPI.pdf"
+      title: "Pose d'un Bouton Anti-Agression",
+      description: "Installation d'un bouton anti-agression pour déclenchement immédiat d'alarme en cas d'urgence.",
+      pdfFile: "Activité2_Nastych_Provicom.pdf",
+      date: "2024",
+      type: "Sécurité",
+      icon: <FiAlertCircle size={32} />
     },
     {
       id: 3,
-      title: "Installation Serveur NAS",
-      description: "Configuration d'un serveur NAS pour le stockage centralisé",
-      pdfFile: "Installation_Nas.pdf"
+      title: "Installation et câblage d'une sirène",
+      description: "Câblage et installation d'une sirène d'alarme pour signaler les intrusions.",
+      pdfFile: "Activité3_Nastych_Provicom.pdf",
+      date: "2024",
+      type: "Alarme",
+      icon: <FiBell size={32} />
     },
     {
       id: 4,
-      title: "Active Directory Domain Services",
-      description: "Installation et configuration d'un contrôleur de domaine Active Directory",
-      pdfFile: "Active_Directory.pdf"
+      title: "Procédure d'installation – Clavier TSA ALCEA",
+      description: "Installation et configuration d'un clavier TSA ALCEA pour la gestion du système d'alarme.",
+      pdfFile: "Activité4_Nastych_Provicom.pdf",
+      date: "2024",
+      type: "Contrôle d'accès",
+      icon: <FiKey size={32} />
     },
     {
       id: 5,
-      title: "Documentation Technique - GLPI",
-      description: "Documentation complète pour l'installation et la configuration de GLPI",
-      pdfFile: "Installation_GLPI.pdf"
+      title: "Migration vers une centrale Risco Lightsys",
+      description: "Migration complète d'un système d'alarme vers une centrale Risco Lightsys.",
+      pdfFile: "Activité5_Nastych_Provicom.pdf",
+      date: "2024",
+      type: "Migration",
+      icon: <FiShield size={32} />
     }
   ];
 
+  const handleBackClick = () => {
+    if (setCurrentPage && typeof setCurrentPage === 'function') {
+      setCurrentPage("Provicom");
+    }
+  };
+
   return (
     <div className="activities-page">
-      <div className="glass-card">
-        <button className="back-link" onClick={() => setCurrentPage("Provicom")}>
-          <FiArrowLeft /> Retour à Provicom
+      {/* Header */}
+      <div className="glass-card header-card">
+        <button className="back-btn" onClick={handleBackClick}>
+          <FiArrowLeft size={18} />
+          Retour à Provicom
         </button>
         
-        <h1 className="section-title">📄 Activités en entreprise</h1>
-        <p className="activities-intro">
-          Voici les 5 missions que j'ai réalisées chez Provicom dans le cadre de mon alternance.
-          Cliquez sur chaque document pour visualiser ou télécharger la documentation technique.
+        <h1 className="section-title">_activites-entreprise</h1>
+        <p className="activities-description">
+          Découvrez l'ensemble des activités techniques que j'ai réalisées chez Provicom dans le cadre de mon alternance.
+          Ces missions concernent l'installation et la maintenance de systèmes de sécurité.
         </p>
+        
+        {/* View Toggle */}
+        <div className="view-toggle">
+          <button 
+            className={`view-btn ${viewMode === 'grid' ? 'active' : ''}`}
+            onClick={() => setViewMode('grid')}
+          >
+            <FiGrid size={16} />
+            Grille
+          </button>
+          <button 
+            className={`view-btn ${viewMode === 'list' ? 'active' : ''}`}
+            onClick={() => setViewMode('list')}
+          >
+            <FiList size={16} />
+            Liste
+          </button>
+        </div>
       </div>
 
-      <div className="activities-grid-page">
+      {/* Activities Stats */}
+      <div className="stats-row">
+        <div className="stat-box">
+          <span className="stat-number-act">5</span>
+          <span className="stat-label-act">Activités réalisées</span>
+        </div>
+        <div className="stat-box">
+          <span className="stat-number-act">2024-2025</span>
+          <span className="stat-label-act">Période</span>
+        </div>
+        <div className="stat-box">
+          <span className="stat-number-act">100%</span>
+          <span className="stat-label-act">Documenté</span>
+        </div>
+      </div>
+
+      {/* Activities Grid/List */}
+      <div className={`activities-container ${viewMode}`}>
         {activities.map((activity) => (
-          <div className="activity-card glass-card" key={activity.id}>
+          <div className={`activity-card glass-card ${viewMode}`} key={activity.id}>
             <div className="activity-number">0{activity.id}</div>
-            <h2 className="activity-title">{activity.title}</h2>
-            <p className="activity-description">{activity.description}</p>
             
-            <div className="activity-actions">
+            <div className="activity-icon-wrapper">
+              {activity.icon}
+            </div>
+            
+            <div className="activity-info">
+              <h3 className="activity-title-act">{activity.title}</h3>
+              <p className="activity-description-act">{activity.description}</p>
+              <div className="activity-meta">
+                <span className="activity-type">{activity.type}</span>
+                <span className="activity-date">{activity.date}</span>
+              </div>
+            </div>
+            
+            <div className="activity-actions-act">
               <a 
                 href={`/documents/${activity.pdfFile}`} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="activity-btn view"
+                className="act-btn view"
               >
-                <FiEye /> Visualiser
+                <FiEye size={16} />
+                Visualiser
               </a>
               <a 
                 href={`/documents/${activity.pdfFile}`} 
                 download
-                className="activity-btn download"
+                className="act-btn download"
               >
-                <FiDownload /> Télécharger
+                <FiDownload size={16} />
+                Télécharger
               </a>
             </div>
           </div>
         ))}
       </div>
+
+      {/* Summary Section */}
+      <div className="glass-card summary-card">
+        <h2 className="section-title-secondary">_resume-activites</h2>
+        <div className="summary-content">
+          <p>
+            Ces 5 activités représentent l'ensemble des missions techniques réalisées chez Provicom.
+            Elles couvrent les domaines suivants :
+          </p>
+          <ul>
+            <li>Installation de caméras IP et vidéosurveillance</li>
+            <li>Pose de boutons anti-agression et dispositifs d'urgence</li>
+            <li>Câblage et installation de sirènes d'alarme</li>
+            <li>Configuration de claviers TSA ALCEA</li>
+            <li>Migration de systèmes d'alarme vers centrale Risco Lightsys</li>
+          </ul>
+          <p className="summary-note">
+            Chaque document est disponible en PDF pour consultation et téléchargement.
+          </p>
+        </div>
+      </div>
+
+      {/* Back to Top Button */}
+      <button 
+        className="back-to-top"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+      >
+        <FiChevronRight size={20} />
+      </button>
     </div>
   );
 };

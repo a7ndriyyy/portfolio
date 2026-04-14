@@ -15,7 +15,7 @@ const BinaryRain = () => {
     
     // Binary characters
     const binaryChars = ['0', '1'];
-    const fontSize = 14;
+    const fontSize = 16; // Increased from 14 for better visibility
     const columns = Math.floor(width / fontSize);
     
     // Drops array
@@ -25,17 +25,18 @@ const BinaryRain = () => {
     }
     
     const draw = () => {
-      // Fade effect
-      ctx.fillStyle = 'rgba(5, 7, 10, 0.05)';
+      // Fade effect - reduced to make rain more persistent
+      ctx.fillStyle = 'rgba(5, 7, 10, 0.03)';
       ctx.fillRect(0, 0, width, height);
       
       ctx.font = `${fontSize}px 'Fira Code', 'Courier New', monospace`;
+      ctx.fontWeight = 'bold'; // Make text bolder
       
       for (let i = 0; i < drops.length; i++) {
         const char = binaryChars[Math.floor(Math.random() * binaryChars.length)];
         
-        // Vary opacity based on position
-        const opacity = Math.min(0.15 + (drops[i] / height) * 0.5, 0.6);
+        // Increased opacity range for better visibility (0.3 to 0.9)
+        const opacity = Math.min(0.3 + (drops[i] / height) * 0.6, 0.9);
         ctx.fillStyle = `rgba(10, 255, 157, ${opacity})`;
         
         ctx.fillText(char, i * fontSize, drops[i] * fontSize);
@@ -44,7 +45,7 @@ const BinaryRain = () => {
           drops[i] = 0;
         }
         
-        drops[i] += 0.3 + Math.random() * 0.5;
+        drops[i] += 0.5 + Math.random() * 0.8; // Faster falling
       }
       
       requestAnimationFrame(draw);

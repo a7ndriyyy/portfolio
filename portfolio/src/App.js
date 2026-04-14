@@ -10,6 +10,7 @@ import HelloPage from './pages/HomePage/HelloPage';
 import HomePage from './pages/HomePage/HomePage';
 import BTSPage from './pages/BTSPage/BTSPage';
 import ProvicomPage from './pages/ProvicomPage/ProvicomPage';
+import ActivitiesPage from './pages/ProvicomPage/ActivitiesPage/ActivitiesPage';  // Fixed path (no extra ActivitiesPage folder)
 import CertificationPage from './pages/CertificationPage/CertificationPage';
 import EpreuvesPage from './pages/EpreuvesPage/EpreuvesPage';
 import UF4Page from './pages/UF4Page/UF4Page';
@@ -26,6 +27,7 @@ function App() {
         return (
           <>
             <HelloPage />
+            <HomePage />
           </>
         );
       case "Profil":
@@ -33,7 +35,9 @@ function App() {
       case "BTS":
         return <BTSPage />;
       case "Provicom":
-        return <ProvicomPage />;
+        return <ProvicomPage setCurrentPage={setCurrentPage} />;  // FIXED: Added setCurrentPage prop
+      case "Activites":
+        return <ActivitiesPage setCurrentPage={setCurrentPage} />;
       case "Certifications":
         return <CertificationPage />;
       case "Épreuves":

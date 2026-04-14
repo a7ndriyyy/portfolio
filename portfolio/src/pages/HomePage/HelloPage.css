@@ -236,7 +236,7 @@
 .stat-label {
   display: block;
   font-size: 0.7rem;
-  color: var(--text-dim);
+  color: var(--text-primary);
 }
 
 /* CTA Button */
