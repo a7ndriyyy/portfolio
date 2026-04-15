@@ -10,7 +10,6 @@ const NavBar = ({ currentPage, setCurrentPage }) => {
     { name: "Certifications", path: "_Certifications" },
     { name: "Épreuves", path: "_Epreuves" },
     { name: "Engagement", path: "_Engagement" },
-    { name: "Projets", path: "_Projets" },
     { name: "Veille Tech", path: "_Veille-tech" },
     { name: "Contacts", path: "_Contact-me" }
   ];

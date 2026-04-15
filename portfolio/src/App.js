@@ -14,7 +14,6 @@ import ActivitiesPage from './pages/ProvicomPage/ActivitiesPage/ActivitiesPage';
 import CertificationPage from './pages/CertificationPage/CertificationPage';
 import EpreuvesPage from './pages/EpreuvesPage/EpreuvesPage';
 import UF4Page from './pages/UF4Page/UF4Page';
-import ProjetsPage from './pages/ProjetsPage/ProjetsPage';
 import VeilleTechPage from './pages/VeilleTechPage/VeilleTechPage';
 import ContactsPage from './pages/ContactsPage/ContactsPage';
 
@@ -44,8 +43,6 @@ function App() {
         return <EpreuvesPage />;
       case "Engagement":
         return <UF4Page />;
-      case "Projets":
-        return <ProjetsPage />;
       case "Veille Tech":
         return <VeilleTechPage />;
       case "Contacts":

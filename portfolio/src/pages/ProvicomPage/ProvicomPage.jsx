@@ -374,7 +374,7 @@ const ProvicomPage = ({ setCurrentPage }) => {
       <ul>
         <li>Installation d'une caméra IP Dahua</li>
         <li>Pose d'un Bouton Anti-Agression</li>
-        <li>Installation et câblage d'une sirène</li>
+        <li>Installation des système anti-intrusion chez APESDAME</li>
         <li>Procédure d'installation – Clavier TSA ALCEA</li>
         <li>Migration vers une centrale Risco Lightsys</li>
       </ul>

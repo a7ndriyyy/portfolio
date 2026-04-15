@@ -30,8 +30,8 @@ const ActivitiesPage = ({ setCurrentPage }) => {
     },
     {
       id: 3,
-      title: "Installation et câblage d'une sirène",
-      description: "Câblage et installation d'une sirène d'alarme pour signaler les intrusions.",
+      title: "Installation des système anti-intrusion chez APESDAME",
+      description: "Installation des système anti-intrusion chez APESDAME.",
       pdfFile: "Activité3_Nastych_Provicom.pdf",
       date: "2024",
       type: "Alarme",
@@ -39,15 +39,6 @@ const ActivitiesPage = ({ setCurrentPage }) => {
     },
     {
       id: 4,
-      title: "Procédure d'installation – Clavier TSA ALCEA",
-      description: "Installation et configuration d'un clavier TSA ALCEA pour la gestion du système d'alarme.",
-      pdfFile: "Activité4_Nastych_Provicom.pdf",
-      date: "2024",
-      type: "Contrôle d'accès",
-      icon: <FiKey size={32} />
-    },
-    {
-      id: 5,
       title: "Migration vers une centrale Risco Lightsys",
       description: "Migration complète d'un système d'alarme vers une centrale Risco Lightsys.",
       pdfFile: "Activité5_Nastych_Provicom.pdf",
@@ -166,8 +157,7 @@ const ActivitiesPage = ({ setCurrentPage }) => {
           <ul>
             <li>Installation de caméras IP et vidéosurveillance</li>
             <li>Pose de boutons anti-agression et dispositifs d'urgence</li>
-            <li>Câblage et installation de sirènes d'alarme</li>
-            <li>Configuration de claviers TSA ALCEA</li>
+            <li>Installation des système anti-intrusion chez APESDAME</li>
             <li>Migration de systèmes d'alarme vers centrale Risco Lightsys</li>
           </ul>
           <p className="summary-note">
