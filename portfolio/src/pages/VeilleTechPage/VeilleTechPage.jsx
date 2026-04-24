@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { 
   FaShieldAlt, FaLock, FaNetworkWired, FaServer, FaDatabase,
-  FaFire, FaVirus, FaKey, FaChartLine, FaUserSecret,
+  FaFire, FaVirus, FaChartLine, FaUserSecret,
   FaExternalLinkAlt, FaArrowRight, FaRobot, FaEye,
-  FaWifi, FaCloud, FaUserLock, FaClipboardList
+ FaCloud, FaUserLock, FaClipboardList
 } from 'react-icons/fa';
 import { MdPhishing, MdSecurity, MdVpnKey } from 'react-icons/md';
 import { SiCisco, SiWireshark } from 'react-icons/si';
