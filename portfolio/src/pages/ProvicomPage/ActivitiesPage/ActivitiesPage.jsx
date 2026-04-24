@@ -148,7 +148,7 @@ const ActivitiesPage = ({ setCurrentPage }) => {
 
       {/* Summary Section */}
       <div className="glass-card summary-card">
-        <h2 className="section-title-secondary">_resume-activites</h2>
+        <h2 className="section-title-secondary">_Resume-activites</h2>
         <div className="summary-content">
           <p>
             Ces 5 activités représentent l'ensemble des missions techniques réalisées chez Provicom.
