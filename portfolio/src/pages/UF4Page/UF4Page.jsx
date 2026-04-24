@@ -2,11 +2,10 @@ import React from 'react';
 import { 
   FaHandsHelping, FaUsers, FaLaptopCode, FaBullhorn, 
   FaCalendarAlt, FaHeart, FaGlobe, FaUniversity,
-  FaShieldAlt, FaComments, FaLightbulb, FaUserGraduate,
+  FaShieldAlt, FaUserGraduate,
   FaFlag, FaNewspaper, FaChartLine, FaArrowRight,
-  FaInstagram, FaFacebook, FaTelegram, FaPenFancy
 } from 'react-icons/fa';
-import { MdOutlineVolunteerActivism, MdEvent, MdVerified } from 'react-icons/md';
+import { MdEvent} from 'react-icons/md';
 import './UF4Page.css';
 
 const UF4Page = () => {
