@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { 
   FiArrowLeft, FiDownload, FiEye, 
-  FiChevronRight, FiGrid, FiList, FiFileText,
-  FiCamera, FiAlertCircle, FiBell, FiKey, FiShield
+  FiChevronRight, FiGrid, FiList,
+  FiCamera, FiAlertCircle, FiBell, FiShield
 } from 'react-icons/fi';
 import './ActivitiesPage.css';
 
