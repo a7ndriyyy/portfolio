@@ -63,7 +63,7 @@ const ProvicomPage = ({ setCurrentPage }) => {
             <FiAward className="info-icon" />
             <div>
               <h3>Statut juridique</h3>
-              <p>Provicom est une <strong>Société à Responsabilité Limitée (SARL)</strong> enregistrée en France, permettant une gestion souple tout en protégeant le patrimoine personnel des associés.</p>
+              <p>Provicom est une <strong>Société par Actions Simplifiée Unipersonnelle (SASU)</strong> enregistrée en France. Ce statut offre une grande flexibilité dans l’organisation de l’entreprise tout en assurant une responsabilité limitée au montant des apports de l’associé unique.</p>
             </div>
           </div>
           
