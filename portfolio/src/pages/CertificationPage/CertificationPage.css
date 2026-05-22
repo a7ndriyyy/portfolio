@@ -20,36 +20,184 @@
   color: var(--neon-green);
 }
 
-/* Score Table */
-.score-table {
-  width: 100%;
-  border-collapse: collapse;
+/* Modules Container - ANSSI */
+.modules-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
   margin: 1rem 0;
 }
 
-.score-table th,
-.score-table td {
-  padding: 0.8rem;
-  text-align: left;
-  border-bottom: 1px solid var(--border-color);
+.module-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.2rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.score-table th {
-  color: var(--neon-green);
-  font-family: var(--font-mono);
+.module-card:hover {
+  transform: translateX(5px);
+  background: var(--neon-green-dim);
+}
+
+.module-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.module-info {
+  flex: 1;
+}
+
+.module-name {
+  font-size: 0.9rem;
   font-weight: 600;
-  font-size: 0.85rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
 }
 
-.score-table td {
+.module-date {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+.module-score {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* RGPD Section */
+.rgpd-intro {
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
-.score-highlight {
-  color: var(--neon-green);
-  font-weight: 600;
+.rgpd-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  perspective: 1000px;
+}
+
+/* RGPD Card 3D Flip Animation */
+.rgpd-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  height: 280px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.rgpd-card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-front {
+  background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-card-solid));
+  border: 1px solid var(--border-color);
+}
+
+.card-back {
+  background: var(--neon-green-dim);
+  border: 1px solid var(--neon-green);
+  transform: rotateY(180deg);
+}
+
+.module-number {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
   font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--neon-green);
+  opacity: 0.3;
+}
+
+.module-icon-rgpd {
+  font-size: 3rem;
+  color: var(--neon-green);
+  margin-bottom: 1rem;
+}
+
+.module-title-rgpd {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+.module-status {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--neon-green-dim);
+  padding: 0.3rem 0.8rem;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  color: var(--neon-green);
+  margin: 0.5rem 0;
+}
+
+.module-score-rgpd {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--neon-green);
+  margin-top: 0.5rem;
+}
+
+.card-back p {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.module-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.module-link:hover {
+  background: var(--neon-green);
+  color: var(--bg-primary);
 }
 
 /* Cert Footer */
@@ -62,7 +210,9 @@
 }
 
 .cert-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   background: var(--neon-green-dim);
   color: var(--neon-green);
   padding: 0.4rem 1.2rem;
@@ -81,53 +231,68 @@
 /* Certificates Grid */
 .certificates-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .certificates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
   .certificates-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* Certificate Card */
-.certificate-card {
+/* Animated Certificate Card */
+.certificate-card-animated {
   background: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   border-radius: 20px;
   padding: 1.5rem;
-  transition: var(--transition-normal);
+  transition: all 0.4s ease;
   text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease;
 }
 
-.certificate-card:hover {
-  transform: translateY(-4px);
+.certificate-card-animated.card-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.certificate-card-animated:hover {
+  transform: translateY(-5px) scale(1.02);
   border-color: var(--neon-green);
   box-shadow: var(--shadow-glow);
 }
 
-.certificate-icon {
+.certificate-icon-animated {
   font-size: 3rem;
-  margin-bottom: 0.5rem;
+  color: var(--neon-green);
+  margin-bottom: 1rem;
 }
 
 .certificate-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: var(--font-mono);
   color: var(--text-primary);
   margin-bottom: 0.8rem;
 }
 
 .certificate-description {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-secondary);
   line-height: 1.5;
   margin-bottom: 0.8rem;
 }
 
 .certificate-date {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--text-dim);
   margin-bottom: 1.2rem;
   font-family: var(--font-mono);
@@ -136,7 +301,7 @@
 /* Certificate Actions */
 .certificate-actions {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -144,11 +309,11 @@
 .cert-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1.2rem;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
   border-radius: 30px;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   transition: var(--transition-fast);
   text-decoration: none;
   cursor: pointer;
@@ -176,58 +341,23 @@
   transform: translateY(-2px);
 }
 
-/* Next Certifications */
-.next-certs {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.next-cert-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  background: var(--bg-tertiary);
-  border-radius: 12px;
-  border-left: 3px solid var(--neon-green);
-  transition: var(--transition-fast);
-}
-
-.next-cert-item:hover {
-  transform: translateX(5px);
-  border-left-color: var(--neon-cyan);
-}
-
-.next-cert-icon {
-  font-size: 1.5rem;
-}
-
-.next-cert-item strong {
-  font-size: 1rem;
-  color: var(--text-primary);
-  font-family: var(--font-mono);
-}
-
-.next-cert-item p {
-  font-size: 0.8rem;
-  color: var(--text-dim);
-  margin-top: 0.2rem;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-  .score-table th,
-  .score-table td {
-    padding: 0.5rem;
-    font-size: 0.75rem;
+  .module-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
   }
   
-  .certificate-card {
-    padding: 1rem;
+  .module-icon {
+    margin-right: 0;
   }
   
-  .certificate-title {
-    font-size: 1rem;
+  .rgpd-cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .rgpd-card {
+    height: 260px;
   }
 }
