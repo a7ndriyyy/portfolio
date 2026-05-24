@@ -130,7 +130,7 @@ const InfraReseauTab = () => {
           <h4 className="subtitle">Documentation - Mission 1</h4>
           <div className="pdf-wrapper">
             <iframe
-              src="/documents/LGI2A_Mission1.pdf"
+              src="/documents/NASTYCH_LGI2A_Mission1.pdf"
               title="Mission 1 - Préparation d'un commutateur d'accès"
               className="pdf-iframe"
               frameBorder="0"
@@ -172,7 +172,7 @@ const InfraReseauTab = () => {
           <h4 className="subtitle">Documentation - Mission 2</h4>
           <div className="pdf-wrapper">
             <iframe
-              src="/documents/LGI2A_Mission2.pdf"
+              src="/documents/NASTYCH_LGI2A_Mission2.pdf"
               title="Mission 2 - Plan d'adressage et réseau LG12A"
               className="pdf-iframe"
               frameBorder="0"
@@ -217,7 +217,7 @@ const InfraReseauTab = () => {
           <h4 className="subtitle">Documentation - Mission 3</h4>
           <div className="pdf-wrapper">
             <iframe
-              src="/documents/LGI2A_Mission3.pdf"
+              src="/documents/NASTYCH_LGI2A_Mission3.pdf"
               title="Mission 3 - VLANs et routage inter-VLAN"
               className="pdf-iframe"
               frameBorder="0"
@@ -225,6 +225,101 @@ const InfraReseauTab = () => {
           </div>
         </div>
       </div>
+       {/* Mission 4 - Mise en place du cœur de réseau et VLANs */}
+<div className="glass-card">
+  <div className="mission-badge">MISSION 4</div>
+  <h2 className="section-title">Mise en place du cœur de réseau et routage inter-VLAN</h2>
+  <p>
+    Configuration du commutateur de niveau 3 (Cisco Catalyst 3560/3750) pour assurer 
+    le routage inter-VLAN et la communication entre les différents services du laboratoire LNR30.
+  </p>
+  
+  <h3 className="subtitle" style={{ marginTop: '1.5rem' }}>Objectifs</h3>
+  <ul className="mission-list">
+    <li>Étudier la documentation technique du constructeur (Cisco Catalyst 3560/3750)</li>
+    <li>Rétablir les réglages d'usine et supprimer les VLANs existants</li>
+    <li>Configurer les paramètres de base (nom d'hôte, mots de passe, bannière MOTD)</li>
+    <li>Configurer les liens trunk 802.1Q entre les commutateurs</li>
+    <li>Mettre en place le protocole VTP (Virtual LAN Trunk Protocol) en mode serveur</li>
+    <li>Propager les VLANs vers les commutateurs clients (SW1 et SW2)</li>
+    <li>Configurer le routage inter-VLAN pour permettre la communication entre les VLANs</li>
+    <li>Effectuer les tests de validation (ping, affichage des VLANs)</li>
+  </ul>
+  
+  <h3 className="subtitle" style={{ marginTop: '1.5rem' }}>Compétences développées</h3>
+  <div className="skill-tags">
+    <span className="badge">Cisco Catalyst 3560/3750</span>
+    <span className="badge">VLAN / 802.1Q</span>
+    <span className="badge">Trunk</span>
+    <span className="badge">VTP (Serveur/Client)</span>
+    <span className="badge">Routage inter-VLAN</span>
+    <span className="badge">STP / EtherChannel</span>
+    <span className="badge">Telnet / SSH</span>
+    <span className="badge">Bannière MOTD</span>
+  </div>
+  
+  {/* PDF Viewer for Mission 4 */}
+  <div className="pdf-viewer-container" style={{ marginTop: '1.5rem' }}>
+    <h4 className="subtitle">Documentation - Mission 4</h4>
+    <div className="pdf-wrapper">
+      <iframe
+        src="/documents/NASTYCH_LGI2A_Mission4.pdf"
+        title="Mission 4 - Cœur de réseau et routage inter-VLAN"
+        className="pdf-iframe"
+        frameBorder="0"
+      />
+    </div>
+  </div>
+</div>
+
+{/* Mission 5 - Configuration NAT/PAT et accès Internet */}
+<div className="glass-card">
+  <div className="mission-badge">MISSION 5</div>
+  <h2 className="section-title">Mise en œuvre du NAT/PAT et accès Internet</h2>
+  <p>
+    Configuration d'un routeur Cisco 881 pour interconnecter le LNR30 avec Internet 
+    et permettre aux utilisateurs autorisés d'accéder au réseau mondial.
+  </p>
+  
+  <h3 className="subtitle" style={{ marginTop: '1.5rem' }}>Objectifs</h3>
+  <ul className="mission-list">
+    <li>Étudier la documentation technique du routeur Cisco 881 (interfaces, capacités)</li>
+    <li>Décrire les interfaces disponibles et les protocoles supportés</li>
+    <li>Proposer un schéma d'infrastructure pour l'intégration du routeur</li>
+    <li>Réaliser la réinitialisation (password recovery) du routeur si nécessaire</li>
+    <li>Configurer les paramètres de base (nom d'hôte, mots de passe, bannière)</li>
+    <li>Configurer l'interface LAN (côté réseau interne) et l'interface WAN (côté Internet)</li>
+    <li>Activer le protocole de routage RIP version 2</li>
+    <li>Mettre en place le service NAT dynamique avec surcharge (NAT overload / PAT)</li>
+    <li>Configurer la route par défaut pour l'accès à Internet</li>
+    <li>Effectuer les tests de validation (accès Internet, traduction d'adresses)</li>
+  </ul>
+  
+  <h3 className="subtitle" style={{ marginTop: '1.5rem' }}>Compétences développées</h3>
+  <div className="skill-tags">
+    <span className="badge">Cisco 881 Router</span>
+    <span className="badge">NAT / PAT (Overload)</span>
+    <span className="badge">RIP v2</span>
+    <span className="badge">Route par défaut</span>
+    <span className="badge">Interface LAN/WAN</span>
+    <span className="badge">Password Recovery</span>
+    <span className="badge">Registre de configuration</span>
+    <span className="badge">Accès Internet sécurisé</span>
+  </div>
+  
+  {/* PDF Viewer for Mission 5 */}
+  <div className="pdf-viewer-container" style={{ marginTop: '1.5rem' }}>
+    <h4 className="subtitle">Documentation - Mission 5</h4>
+    <div className="pdf-wrapper">
+      <iframe
+        src="/documents/NASTYCH_LGI2A_Mission5.pdf"
+        title="Mission 5 - NAT/PAT et accès Internet"
+        className="pdf-iframe"
+        frameBorder="0"
+      />
+    </div>
+  </div>
+</div>
     </div>
   );
 };

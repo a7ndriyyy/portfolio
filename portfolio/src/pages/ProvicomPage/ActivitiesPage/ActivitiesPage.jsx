@@ -91,11 +91,11 @@ const ActivitiesPage = ({ setCurrentPage }) => {
       {/* Activities Stats */}
       <div className="stats-row">
         <div className="stat-box">
-          <span className="stat-number-act">5</span>
+          <span className="stat-number-act">4</span>
           <span className="stat-label-act">Activités réalisées</span>
         </div>
         <div className="stat-box">
-          <span className="stat-number-act">2024-2025</span>
+          <span className="stat-number-act">2024-2026</span>
           <span className="stat-label-act">Période</span>
         </div>
         <div className="stat-box">
