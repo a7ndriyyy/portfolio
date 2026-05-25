@@ -370,13 +370,12 @@ const ProvicomPage = ({ setCurrentPage }) => {
   <div className="activities-link-content">
     <div className="activities-link-text">
       <h2>📄 Activités en entreprise</h2>
-      <p>Consultez mes 5 missions réalisées chez Provicom :</p>
+      <p>Consultez mes 4 missions réalisées chez Provicom :</p>
       <ul>
-        <li>Installation d'une caméra IP Dahua</li>
-        <li>Pose d'un Bouton Anti-Agression</li>
-        <li>Installation des système anti-intrusion chez APESDAME</li>
-        <li>Procédure d'installation – Clavier TSA ALCEA</li>
-        <li>Migration vers une centrale Risco Lightsys</li>
+        <li>Installation vidéosurveillance chez Givenchy</li>
+        <li>Installation des systèmes anti-intrusion chez APESDAMM</li>
+        <li>Migration vers une centrale RISCO LightSYS Plus (Comptoir Richard)</li>
+        <li>Installation d'un système d'alarme ALCEA (Gare Fontenay-le-Fleury)</li>
       </ul>
     </div>
     <button 

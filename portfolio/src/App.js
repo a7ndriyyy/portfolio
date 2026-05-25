@@ -26,7 +26,6 @@ function App() {
         return (
           <>
             <HelloPage />
-            <HomePage />
           </>
         );
       case "Profil":

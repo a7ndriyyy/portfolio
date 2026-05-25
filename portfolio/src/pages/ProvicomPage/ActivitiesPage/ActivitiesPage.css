@@ -347,3 +347,63 @@
 .back-to-top:hover svg {
   color: var(--bg-primary);
 }
+
+/* Clients Section */
+.clients-card {
+  margin-bottom: 1.8rem;
+}
+
+.clients-grid-act {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .clients-grid-act {
+    grid-template-columns: 1fr;
+  }
+}
+
+.client-item-act {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-tertiary);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  transition: var(--transition-fast);
+}
+
+.client-item-act:hover {
+  border-color: var(--neon-green);
+  transform: translateX(5px);
+}
+
+.client-icon {
+  font-size: 2rem;
+}
+
+.client-info h3 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.client-info p {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+
+/* Client label in activity card */
+.activity-client {
+  font-size: 0.75rem;
+  color: var(--neon-cyan);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
+}
+
+.client-label {
+  color: var(--text-dim);
+}

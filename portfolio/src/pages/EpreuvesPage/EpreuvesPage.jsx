@@ -1,40 +1,43 @@
 import React from 'react';
-import { FiExternalLink } from 'react-icons/fi';
+import { FiFileText, FiDownload, FiEye } from 'react-icons/fi';
 import './EpreuvesPage.css';
 
 const EpreuvesPage = () => {
-  // Met ici l'URL de ton Google Sheet
-  const sheetUrl = "https://docs.google.com/spreadsheets/d/1KsWwEqmZWtMXjHHOmFEoqW8ZJ4hvG_rl/edit?usp=sharing&ouid=101058459909286330758&rtpof=true&sd=true";
-  
-  // Extrait l'ID pour l'embed
-  const sheetId = sheetUrl.split('/d/')[1]?.split('/')[0];
-
   return (
     <div className="epreuves-page">
+      {/* Epreuve E4 - Tableau de synthèse */}
       <div className="glass-card">
-        <h1 className="section-title">_epreuves-bts-sio</h1>
-        <div className="mission-header">
-          <h3>Tableau de synthèse des réalisations professionnelles</h3>
-          <p>Session 2024 - 2026 | Option SISR</p>
-        </div>
-        <p>
-          Tableau de synthèse des compétences validées durant ma formation BTS SIO SISR.
+        <h1 className="section-title">Épreuve E4 - Tableau de synthèse</h1>
+        <p className="epreuve-description">
+          Tableau de synthèse des compétences acquises durant ma formation BTS SIO,
+          présentant les différentes réalisations professionnelles et leur contexte.
         </p>
-      </div>
-
-      {/* Google Sheets Viewer */}
-      <div className="glass-card pdf-viewer-container">
-        <h3 className="subtitle">Tableau de synthèse</h3>
+        
         <div className="pdf-actions">
-          <a href={sheetUrl} target="_blank" rel="noopener noreferrer" className="pdf-btn view">
-            <FiExternalLink size={16} />
-            Ouvrir dans Google Sheets
+          <a 
+            href="" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="pdf-btn view"
+          >
+            <FiEye size={16} />
+            Visualiser le tableau
+          </a>
+          <a 
+            href="" 
+            download
+            className="pdf-btn download"
+          >
+            <FiDownload size={16} />
+            Télécharger le PDF
           </a>
         </div>
-        <div className="pdf-wrapper">
+        
+        {/* PDF Viewer */}
+        <div className="pdf-viewer-container-epreuves">
           <iframe
-            src={`https://docs.google.com/spreadsheets/d/${sheetId}/preview`}
-            title="Tableau de synthèse BTS SIO"
+            src="/documents/Tableau_Synthese_E4.pdf"
+            title="Tableau de synthèse E4 - Nastych Andrii"
             className="pdf-iframe"
             frameBorder="0"
           />
