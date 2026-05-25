@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiFileText, FiDownload, FiEye } from 'react-icons/fi';
+import { FiDownload, FiEye } from 'react-icons/fi';
 import './EpreuvesPage.css';
 
 const EpreuvesPage = () => {
@@ -15,7 +15,7 @@ const EpreuvesPage = () => {
         
         <div className="pdf-actions">
           <a 
-            href="" 
+            href="/documents/Tableau_Synthese_E4.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             className="pdf-btn view"
@@ -24,7 +24,7 @@ const EpreuvesPage = () => {
             Visualiser le tableau
           </a>
           <a 
-            href="" 
+            href="/documents/Tableau_Synthese_E4.pdf" 
             download
             className="pdf-btn download"
           >
