@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f2ff"/>
+      <stop offset="100%" style="stop-color:#0aff9d"/>
+    </linearGradient>
+  </defs>
+  <!-- Cercle de fond -->
+  <circle cx="256" cy="256" r="240" fill="#0a0c10" stroke="url(#grad)" stroke-width="12"/>
+  <!-- Lettre A stylisée -->
+  <path d="M256 120 L140 400 L180 400 L210 320 L302 320 L332 400 L372 400 L256 120Z" 
+        fill="url(#grad)"/>
+  <!-- Barre horizontale du A -->
+  <rect x="220" y="270" width="72" height="12" fill="#0a0c10" rx="4"/>
+  <!-- Petite étoile -->
+  <circle cx="256" cy="400" r="8" fill="#0aff9d"/>
+</svg>

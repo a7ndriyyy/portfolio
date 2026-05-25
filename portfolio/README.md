@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Andrii Nastych - Portfolio BTS SIO SISR
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react)](https://reactjs.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3)](https://developer.mozilla.org/fr/docs/Web/CSS)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel)](https://vercel.com)
 
-## Available Scripts
+## 📋 À propos
 
-In the project directory, you can run:
+Portfolio professionnel développé avec **React**, présentant mon parcours, mes compétences et mes réalisations dans le cadre de mon **BTS SIO (Services Informatiques aux Organisations)** option **SISR (Solutions d'Infrastructure, Systèmes et Réseaux)**.
 
-### `npm start`
+### 🎯 Objectif
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ce portfolio a pour but de :
+- Présenter mon parcours et mes compétences techniques
+- Documenter mes projets et activités professionnelles
+- Démontrer ma maîtrise des technologies web modernes
+- Servir de support pour mes épreuves du BTS SIO
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Technologies utilisées
 
-### `npm test`
+| Technologie | Version | Utilisation |
+|-------------|---------|-------------|
+| React | 18.2.0 | Framework principal |
+| React Icons | - | Bibliothèque d'icônes |
+| CSS3 | - | Styles personnalisés |
+| Framer Motion | - | Animations |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Structure du projet
 
-### `npm run build`
+## 🖥️ Pages du site
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Page | Description |
+|------|-------------|
+| **Accueil** | Présentation avec effet matrix et binaire |
+| **Profil** | CV, compétences et parcours |
+| **BTS SIO** | Présentation de la formation et spécialités |
+| **Provicom** | Présentation de mon entreprise d'accueil |
+| **Certifications** | Certifications ANSSI, RGPD, TryHackMe |
+| **Épreuves** | Tableaux de synthèse E4/E5/E6 |
+| **Engagement** | Association NEF et bénévolat |
+| **Veille Tech** | Veille sur la sécurité réseau |
+| **Contacts** | Formulaire et liens |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🎨 Thème
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Cyber sécurité** : Design inspiré des interfaces hacker/terminal
+- **Mode sombre** : Confort visuel et style moderne
+- **Animations** : Effets glitch, scan lines, binary rain
+- **Responsive** : Adapté à tous les écrans
 
-### `npm run eject`
+## 📦 Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+# Cloner le dépôt
+git clone https://github.com/a7ndriyyy/portfolio.git
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Accéder au dossier
+cd portfolio
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Installer les dépendances
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Lancer le serveur de développement
+npm start
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Build pour la production
+npm run build
