@@ -10,7 +10,6 @@ const LGiAPage = () => {
           <h2>LE RÉSEAU DES LABORATOIRES GOUVERNEMENTAUX POUR L'INDUSTRIE AGRO-ALIMENTAIRE</h2>
         </div>
         <p>
-          Projet de préparation d'un commutateur d'accès dans le cadre de la formation BTS SIO.
           Objectif : configurer et sécuriser l'infrastructure réseau pour répondre aux besoins
           des laboratoires gouvernementaux.
         </p>
