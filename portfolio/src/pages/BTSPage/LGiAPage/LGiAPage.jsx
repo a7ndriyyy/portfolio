@@ -5,7 +5,7 @@ const LGiAPage = () => {
   return (
     <div>
       <div className="glass-card">
-        <h1 className="section-title">🌐 LG12A – Réseaux de laboratoires gouvernementaux</h1>
+        <h1 className="section-title">🌐 LGI2A – Réseaux de laboratoires gouvernementaux</h1>
         <div className="mission-header">
           <h2>LE RÉSEAU DES LABORATOIRES GOUVERNEMENTAUX POUR L'INDUSTRIE AGRO-ALIMENTAIRE</h2>
         </div>
@@ -16,11 +16,11 @@ const LGiAPage = () => {
       </div>
 
        <div className="glass-card pdf-viewer-container">
-        <h3 className="subtitle">Documentation technique - Contexte LG12A</h3>
+        <h3 className="subtitle">Documentation technique - Contexte LGI2A</h3>
         <div className="pdf-wrapper">
           <iframe
             src="../../../../public/documents/Contexte_LGI2A_session2021_Rev10.pdf"
-            title="Contexte LG12A"
+            title="Contexte LGI2A"
             className="pdf-iframe"
             frameBorder="0"
           />
